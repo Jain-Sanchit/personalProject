@@ -1,13 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Happy Happy Happy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To the Prettiest Girlfriend 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to right, #ffe6f0, #ffe6ff);
+      text-align: center;
+      overflow-x: hidden;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      color: #d63384;
+      font-size: 2.5em;
+      margin-top: 1.5em;
+      animation: popIn 1.2s ease forwards;
+    }
+
+    img.heart {
+      width: 200px;
+      margin: 20px auto;
+      display: block;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 3em auto;
+      padding: 0 1em;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 1.5em;
+      max-width: 400px;
+      width: 100%;
+      animation: slideIn 1s ease;
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 1.2em;
+      font-size: 1.2em;
+    }
+
+    .memories img, .memories video {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 1em;
+    }
+
+    .surprise-button {
+      background-color: #ff69b4;
+      border: none;
+      padding: 1em 2em;
+      font-size: 1.2em;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      animation: pulse 2s infinite;
+    }
+
+    .surprise-button:hover {
+      background-color: #ff1493;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
 </head>
 <body>
-<h1>Something crazy is loading ...</h1>
+  <h1>To the Prettiest Girlfriend in the Whole Universe 💖</h1>
+  <img src="./testImage3.jpg" alt="Flowers Heart" class="heart">
 
-<img src="./testImage.jpg">
+  <section>
+    <div class="card">
+      <h2>Reasons I Love You 💕</h2>
+      <ul>
+        <li>Your smile lights up my world 🌟</li>
+        <li>You always support me, no matter what 🤗</li>
+        <li>You're the sweetest person ever 🍯</li>
+        <li>You're stunning, inside and out 💃</li>
+        <li>Being with you feels like a fairytale ✨</li>
+      </ul>
+    </div>
 
-<h1>Wait and watch</h1>
+    <div class="card memories">
+      <h2>Our Memories 📸</h2>
+      <img src="./testImage.jpg" alt="Memory 1">
+      <!-- <video controls src="videos/love-moment.mp4"></video> -->
+    </div>
+  </section>
+
+  <div>
+    <button class="surprise-button" onclick="alert('Surprise! I love you more every single day 💘')">Click here for a Surprise ✨</button>
+  </div>
 </body>
 </html>
