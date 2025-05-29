@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy 2nd year anniversary</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #ffe0f0, #fff);
+      font-family: 'Georgia', serif;
+      color: #5b004f;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .sparkle {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .sparkle span {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: radial-gradient(white, transparent);
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: sparkleAnim linear infinite;
+    }
+
+    @keyframes sparkleAnim {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 2.5rem;
+      color: #d63384;
+      z-index: 1;
+      position: relative;
+    }
+
+    .image-row {
+  display: flex;
+  justify-content: space-between; /* optional for spacing */
+}
+    .hero-image {
+      width: 33%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 4px solid #ffb3d9;
+    }
+
+    .content {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      z-index: 1;
+      position: relative;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin: 1.2rem 0;
+    }
+
+    .collage {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    .collage img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      text-align: center;
+      margin: 2rem 0;
+      z-index: 1;
+      position: relative;
+    }
+
+    nav a {
+      background-color: #d63384;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #a61e4d;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sparkles -->
+  <div class="sparkle"></div>
+
+<audio id="bgMusic" loop>
+    <source src="date1.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Header -->
+  <header>Happy 2nd year anniversary 💑</header>
+
+
+  <!-- Story Content -->
+  <section class="content">
+    <p> 
+        Happy 2nd year anniversary cutie pie, 2 saal itni jaldi beet gye pta bhi nhi chla (Apart from last few weeks though).
+        Abhi to 2 hi hue h aur abhi kafi hone, and we will have some many great years till old age for sure.
+    </p>
+
+    <p>
+        This time ham eksath nhi h blr me and in a long distance relationship for now, but ye time bhi jald hi khtm ho jayega and we will be in blr again together enjoying having fun, do not worry.
+        Jald hi ham wapas dates pe jynege, ghumi ghumi jayenge, khayenge mast and masti krenge full on.
+    </p>
+
+    <p>
+        2 saal ekdam se beet gye, i can not tell kitna mza aaya. Kya kya kiya hmne, itna kuch, itna ghume, itna chill and netflix kra etc etc.
+        They were amazing 2 years to be honest, so much of stuff and so many things. These were the best years.
+        Everyday was amazing, every month was like mast ekdam.
+    </p>
+
+    <p>
+       Life kitni tez se guzar rhi, we used to celebrate months and now we are celebrating years, soon it will be decades too.
+       I love you the most and these past 2 years have been amazing cutie. I hope to see many more and enjoy more with you.
+
+       I know tu bimar h abhi and not physically at best, but as i always say similar to my blood group B+, ek din wapas sab shi ho jayga, we will again be having fun remembering the curretn tough time.
+
+       Soon you will be back with me, it will be amazing, I am waiting fro you. 
+
+       2 sal me bhot mza aaya and aise hi aage bhi ayega, more of everything we will do.
+    </p>
+
+
+      <p>
+        Happy 2nd year anniversary again.... Picture abhi baki h and many more to come baby ....
+      </p>
+
+    
+    </div>
+  </section>
+
+
+  <nav>
+        <a href="index.html">Home</a>
+        <button class="surprise-button" onclick="alert('Surprise! I love you more every single day 💘'); document.getElementById('bgMusic').play()">Click here for a Surprise ✨</button>
+    </nav>
+
+  <!-- Sparkle Script -->
+  <script>
+    const sparkleContainer = document.querySelector('.sparkle');
+    for (let i = 0; i < 40; i++) {
+      const sparkle = document.createElement('span');
+      sparkle.style.left = `${Math.random() * 100}%`;
+      sparkle.style.animationDuration = `${3 + Math.random() * 4}s`;
+      sparkle.style.animationDelay = `${Math.random() * 5}s`;
+      sparkleContainer.appendChild(sparkle);
+    }
+  </script>
+
+</body>
+</html>
