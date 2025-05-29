@@ -1,22 +1,195 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our 1st Anniversary</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>More adventures together</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #ffe0f0, #fff);
+      font-family: 'Georgia', serif;
+      color: #5b004f;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .sparkle {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .sparkle span {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: radial-gradient(white, transparent);
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: sparkleAnim linear infinite;
+    }
+
+    @keyframes sparkleAnim {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 2.5rem;
+      color: #d63384;
+      z-index: 1;
+      position: relative;
+    }
+
+    .image-row {
+  display: flex;
+  justify-content: space-between; /* optional for spacing */
+}
+    .hero-image {
+      width: 33%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 4px solid #ffb3d9;
+    }
+
+    .content {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      z-index: 1;
+      position: relative;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin: 1.2rem 0;
+    }
+
+    .collage {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    .collage img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      text-align: center;
+      margin: 2rem 0;
+      z-index: 1;
+      position: relative;
+    }
+
+    nav a {
+      background-color: #d63384;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #a61e4d;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <header>Our 1st Anniversary</header>
-    <section>
-        <p>This page will contain text and images about <strong>our 1st anniversary</strong>.</p>
-        <p>Add your own sweet message here 💖</p>
-        <img src="testImage.jpg" alt="Memory" width="300">
-    </section>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="page7-more-adventures.html">Next</a>
-    </nav>
+
+  <!-- Sparkles -->
+  <div class="sparkle"></div>
+
+
+
+  <!-- Header -->
+  <header>More adventures together 💑</header>
+
+  <div class="image-row">
+
+  <!-- Lake Side Hero Image -->
+  <img class="hero-image" src="advf.jpeg" alt="trip" />
+  <img class="hero-image" src="adve.jpeg" alt="trip" />
+  <img class="hero-image" src="advb.jpeg" alt="trip" />
+  </div>
+
+  <!-- Story Content -->
+  <section class="content">
+    <p> 
+        Apart from dates, staying at home, going for trips and games, we had many adventurous activits too.
+    </p>
+
+    <p>
+        We did Scooba, paragliding, ziplining(holding hands photo ooty...), kayaking(dandelions song...), meeting a tiger, universal rides and what not...
+    </p>
+
+    <p>
+       There were so many more activites and fun things we did for the first time and all of them were fun, becoz we were together in them.
+    </p>
+
+    <p>
+        We did so many acitvities and once you are back in health, we will do more safer acitvities nd adventures.
+    </p>
+
+
+      <p>
+        Adventures that we can not talk about here are also there 🌚🌚🌚
+      </p>
+
+    <!-- Collage -->
+    <div class="collage">
+      <img src="advd.jpeg" alt="trip" />
+      <img src="advj.jpeg" alt="trip" />
+      <img src="advi.jpeg" alt="trip" />
+    </div>
+    <!-- Collage -->
+    <div class="collage">
+      <img src="adva.jpeg" alt="trip" />
+      <img src="advg.jpeg" alt="trip" />
+      <img src="advh.jpeg" alt="trip" />
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="page6-anniversary.html">Back</a>
+    <a href="page8-happy-2nd-anniversary.html">Let's move ahead</a>
+  </nav>
+
+  <!-- Sparkle Script -->
+  <script>
+    const sparkleContainer = document.querySelector('.sparkle');
+    for (let i = 0; i < 40; i++) {
+      const sparkle = document.createElement('span');
+      sparkle.style.left = `${Math.random() * 100}%`;
+      sparkle.style.animationDuration = `${3 + Math.random() * 4}s`;
+      sparkle.style.animationDelay = `${Math.random() * 5}s`;
+      sparkleContainer.appendChild(sparkle);
+    }
+  </script>
+
 </body>
 </html>
