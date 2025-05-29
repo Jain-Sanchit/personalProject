@@ -124,8 +124,8 @@
   <div class="sparkle"></div>
 
   <!-- Background Music -->
-  <audio autoplay loop>
-    <source src="music/soft-romantic.mp3" type="audio/mp3">
+  <audio id="bgMusic" loop>
+    <source src="date1.mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
 
@@ -179,6 +179,19 @@
     <a href="page1-first-day.html">Back</a>
     <a href="page3-first-trip.html">Let's move ahead</a>
   </nav>
+
+  <button onclick="document.getElementById('bgMusic').play()" style="
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #d63384;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  z-index: 999;
+">🎵 Play Music</button>
 
   <!-- Sparkle Script -->
   <script>
